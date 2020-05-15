@@ -1,0 +1,26 @@
+<h1>welcome to update page</h1>
+<form class="updatForm" #userForm="ngForm" (ngSubmit)="updatePat(userForm)"> 
+        <label for= "pid"><b><font size="4">ENTER UPDATED PID :</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" required="required" name="pid" [(ngModel)]="this.upatient.pid"#pid="ngModel"/><br><br>
+        <div *ngIf="pid.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+          <h6>pid is Required.</h6>
+        </div><br><br>
+          <label for= "patientName"><b><font size="4">ENTER UPDATED PATIENT NAME :</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" required="required" name="patientName" [(ngModel)]="this.upatient.patientName"#patientName="ngModel"/><br><br>
+          <div *ngIf="patientName.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+            <h6>patient name is Required.</h6>
+        </div><br><br>
+            <label for= "patientProblem"><b><font size="4">ENTER PATIENT PROBLEM :</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" required="required" name="patientProblem" [(ngModel)]="this.upatient.patientProblem"#patientProblem="ngModel"/><br><br>
+            <div *ngIf="pid.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+              <h6>patient Problem is Required.</h6>
+            </div><br><br>
+    <button type="submit" button>Apply</button><br>
+    <input class="cancel" type="button" value="cancel" (click)="dash()"/>
+</form>
+
+
+<fieldset class="applyfset">
+  <legend>Result</legend>
+  <h2>{{result}}</h2>
+</fieldset>

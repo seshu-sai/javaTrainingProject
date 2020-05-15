@@ -1,0 +1,13 @@
+<h1>Welcome to show patient details page</h1>
+<table border="3">
+    <tr>
+        <th>PID</th>
+        <th>PATIENTNAME</th>
+        <th>PATIENTPROBLEM</th>
+    </tr>
+    <tr *ngFor="let items of  collection">
+        <td>{{items.pid}}</td>
+        <td>{{items.patientName}}</td>
+        <td>{{items.patientProblem}}</td>
+    </tr>
+</table>

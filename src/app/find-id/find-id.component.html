@@ -1,0 +1,8 @@
+<h1>welcome to find by id page</h1>
+<p>Search patient &nbsp; <input type="text" name="pid" [(ngModel)]="pid"></p>
+<input type="button" value="submit" (click)="getId(pid)"><br/><br/>
+
+ 
+    <b>pid :  </b>{{(collection | async )?.pid}}<br/><br/>
+    <b>patient name:  </b>{{(collection | async )?.patientName}}<br/><br/>
+    <b>patient problem:  </b>{{(collection | async )?.patientProblem}}<br/><br/>
